@@ -4,16 +4,13 @@ import lombok.Builder;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.redis.core.RedisHash;
-import org.springframework.data.redis.core.index.Indexed;
 
-@RedisHash
 @Data
 @Builder
-public class Role {
+@RedisHash
+public class Category {
 
     @Id
     private String id;
-    @Indexed
     private String name;
-
 }

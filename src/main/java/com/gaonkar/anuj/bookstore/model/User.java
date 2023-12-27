@@ -1,5 +1,6 @@
 package com.gaonkar.anuj.bookstore.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -15,6 +16,7 @@ import org.springframework.data.redis.core.index.Indexed;
 import java.util.HashSet;
 import java.util.Set;
 
+@JsonIgnoreProperties(value = { "password", "passwordConfirm" }, allowSetters = true)
 @RedisHash
 @Data
 @ToString(onlyExplicitlyIncluded = true)
