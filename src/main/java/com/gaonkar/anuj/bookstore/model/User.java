@@ -1,5 +1,6 @@
 package com.gaonkar.anuj.bookstore.model;
 
+import com.fasterxml.jackson.annotation.JsonIdentityReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
@@ -46,10 +47,18 @@ public class User {
     private String confirmPassword;
 
     @Reference
+    @JsonIdentityReference(alwaysAsId = true)
     private Set<Role> roles = new HashSet<>();
 
     public void addRole(Role role) {
         this.roles.add(role);
     }
 
+    @Reference
+    @JsonIdentityReference(alwaysAsId = true)
+    private Set<Book> books = new HashSet<>();
+
+    public void addBook(Book book) {
+        this.books.add(book);
+    }
 }
