@@ -1,5 +1,6 @@
 package com.gaonkar.anuj.bookstore.controller;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.HttpStatus;
@@ -11,6 +12,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/redis")
+@Tag(name = "Test", description = "Test Controller for Redis")
 public class HelloRedisController {
 
     @Autowired
