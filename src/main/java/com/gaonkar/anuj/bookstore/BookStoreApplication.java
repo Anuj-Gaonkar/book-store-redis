@@ -10,6 +10,7 @@ public class BookStoreApplication {
 		SpringApplication.run(BookStoreApplication.class, args);
 		System.out.println("*********************** Running Bookstore Application ***********************");
 		System.out.println("From Test Branch");
+		System.out.println("Test 2");
 	}
 
 }
